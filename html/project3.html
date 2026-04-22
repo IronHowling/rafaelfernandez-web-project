@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Future Scope: Intelligent Agents</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="project2.html">IoT Security (Project 2)</a>
+        <a href="project3.html">Future Scope (Project 3)</a>
+    </nav>
+
+    <div class="research-container">
+        <h1>Future Scope: Machine Learning in Threat Detection</h1>
+
+        <p>
+            Building upon the architecture of <strong>Ephemeral Intelligent Agents</strong>, the next frontier in cybersecurity for high-stakes environments involves integrating advanced machine learning heuristics. As critical infrastructures like orbital satellite networks evolve, our defense mechanisms must pivot from reactive to predictive models.
+        </p>
+
+        <h2>Predictive Anomaly Detection</h2>
+        <p>
+            Traditional security models rely on known signatures to identify threats. However, utilizing a "Triggered Presence" model requires the agent to wake up <em>before</em> a catastrophic failure occurs. By applying lightweight machine learning algorithms directly to the implantable medical devices (IMDs) or industrial controllers, the system can establish a baseline of normal operations.
+        </p>
+        
+        <ul>
+            <li><strong>Spatial Correlation:</strong> Identifying abnormal behavior by comparing an actuator's current output to its historical mean.</li>
+            <li><strong>Temporal Correlation:</strong> Detecting "stealthy attacks" where an adversary marginally manipulates sensors over a long period to avoid triggering immediate alarms.</li>
+            <li><strong>Automated Self-Healing:</strong> Diagnosing system failures in real-time and restoring normal operations without human intervention.</li>
+        </ul>
+
+        <h2>The Role of Big Data</h2>
+        <p>
+            The effectiveness of these detection algorithms is heavily dependent on data. By analyzing vast amounts of traffic flow and behavioral patterns across an entire interconnected grid, Ephemeral Agents can be trained to recognize the earliest stages of a cyber-intrusion.
+        </p>
+
+        <img src="../images/iot-network.jpg" alt="Visualization of an interconnected secure IoT network with glowing nodes">
+        <p class="attribution">Image source: Conceptual network rendering.</p>
+        <hr>
+
+        <div class="research-highlight">
+    <h3>Protocol: Orbital Amputation & Autonomous Reconstruction</h3>
+    <p>In high-stakes environments like orbital satellite networks, a single compromised node can threaten the entire mission. My research proposes a "Self-Severing" logic for Ephemeral Agents:</p>
+    <ol>
+        <li><strong>Anomalous Detection & Isolation:</strong> When an onboard sensor or actuator behaves erratically, the Agent immediately "amputates" the logic gates for that specific system, quarantining the threat before it can pivot to the primary flight computer.</li>
+        <li><strong>Automated Code Reconstruction:</strong> The Agent pulls an immutable, clean version of the code from protected read-only memory and re-writes the system's active logic, restoring normal operations while the infected section remains offline.</li>
+        <li><strong>Telemetry Extraction:</strong> Before the quarantine is purged, the Agent compresses the forensic data of the attack and transmits it back to Ground Control for deep analysis.</li>
+        <li><strong>Secure Self-Termination:</strong> Once the system is restored and the data is sent, the Agent executes a secure wipe of the quarantined memory and itself, leaving zero forensic trace for the adversary to follow.</li>
+    </ol>
+</div>
+        
+
+<div class="faq-section">
+    <h2>Research Q&A: Addressing the Edge Cases</h2>
+    
+    <div class="qa-item">
+        <p><strong>Q: Why can't we just send a normal over-the-air (OTA) update to fix these vulnerabilities?</strong></p>
+        <p>A: Traditional OTA updates are too heavy for resource-constrained devices like pacemakers. Additionally, if the update mechanism itself is compromised or unencrypted—as noted in IEEE research—an adversary could block the patch or substitute it with malicious firmware.</p>
+    </div>
+
+    <div class="qa-item">
+        <p><strong>Q: Won't an "Intelligent Agent" drain the battery of a medical implant?</strong></p>
+        <p>A: Not with a <b>Triggered Presence</b> model. The agent remains in a deep-sleep dormancy state, only consuming clock cycles when an anomaly is detected. This reclamation of volatile memory is vital for devices where battery depletion is a life-threatening risk.</p>
+    </div>
+
+    <div class="qa-item">
+        <p><strong>Q: How does self-deletion help if the hacker is already inside the network?</strong></p>
+        <p>A: It removes the <b>forensic footprint</b>. If a security tool stays on a device, a hacker can study it to find a workaround. By self-deleting after a mission, the agent leaves the attacker with no data to reverse-engineer, effectively resetting the "Substitute" decoy.</p>
+    </div>
+
+    <div class="qa-item">
+        <p><strong>Q: Why not use standard encryption like AES-256 for all these devices?</strong></p>
+        <p>A: Many legacy IoT devices lack the hardware acceleration needed for modern encryption. Furthermore, the "Quantum Threat" means we need to look toward <b>Post-Quantum Cryptography (PQC)</b>, which is currently being standardized by NIST to survive future decryption attempts.</p>
+    </div>
+</div>
+        <h2>Research Validation & Next Steps</h2>
+        <p>
+            Current literature, including comprehensive surveys from <a href="https://ieeexplore.ieee.org/document/8730298" target="_blank">IEEE Access</a>, validates the critical need for transient, hardware-level defenses in resource-constrained devices. Future iterations of this project will simulate these environments using tools like OMNeT++ and SUMO to quantify the exact battery preservation metrics of our proposed agents.
+        </p>
+    </div>
+<div class="sim-console">
+    <div class="scan-overlay"></div>
+    <h3>LIVE SYSTEM STATUS: SATELLITE-N7</h3>
+    <div class="status-grid">
+        <div class="node active">FLIGHT COMP [SECURE]</div>
+        <div class="node warning">OXYGEN-SENSE [ANOMALY]</div>
+        <div class="node quarantine">COMMS-ARRAY [ISOLATED]</div>
+    </div>
+    <p class="console-text">> EPHEMERAL AGENT: WAKING...</p>
+    <p class="console-text">> QUARANTINE PROTOCOL: ACTIVE</p>
+    <p class="console-text">> DATA TELEMETRY: TRANSMITTING TO EARTH...</p>
+</div>
+
+</body>
+</html>

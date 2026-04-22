@@ -1,0 +1,270 @@
+/* Core Page Setup - Dark Mode Base */
+body {
+    background-color: #050505;
+    background-image: 
+        linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+/* Navigation Bar - Neon Border */
+nav {
+    background-color: #121217;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #00f2ff; /* Neon Cyan Border */
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+nav a {
+    color: #00f2ff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+}
+
+/* Main Content Container - Glowing Card */
+.research-container {
+    background: rgba(22, 22, 29, 0.85); /* Transparent dark */
+    backdrop-filter: blur(10px); /* Blurs the grid behind it */
+    border: 1px solid rgba(0, 242, 255, 0.3); /* Subtle neon border */
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Headers - Neon Accents */
+h1 {
+    color: #ffffff;
+    font-size: 2.8em;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+    margin-top: 0;
+}
+
+h2 {
+    color: #ff00ff; /* Neon Magenta */
+    font-size: 1.8em;
+    margin-top: 40px;
+    border-left: 4px solid #ff00ff;
+    padding-left: 15px;
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.3);
+}
+
+/* Text and Lists */
+p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #b0b0b0;
+    margin-bottom: 25px;
+}
+
+ul {
+    border: 1px solid #00f2ff;
+    background: rgba(0, 242, 255, 0.05);
+    padding: 25px 25px 25px 50px;
+    border-radius: 8px;
+}
+
+li strong {
+    color: #00f2ff; /* Cyan highlights for list terms */
+}
+
+/* Images - Neon Frame */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border: 2px solid #00f2ff;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+}
+
+/* Link Styling */
+.research-container a {
+    color: #00f2ff;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dashed #00f2ff;
+}
+
+.research-container a:hover {
+    color: #ffffff;
+    background: rgba(0, 242, 255, 0.2);
+}
+
+@keyframes neon-pulse {
+    0% { text-shadow: 0 0 10px rgba(0, 242, 255, 0.5); }
+    50% { text-shadow: 0 0 25px rgba(0, 242, 255, 0.9); }
+    100% { text-shadow: 0 0 10px rgba(0, 242, 255, 0.5); }
+}
+
+h1 {
+    animation: neon-pulse 3s infinite ease-in-out;
+}
+
+/* FAQ Section Styling */
+.faq-section {
+    margin-top: 50px;
+}
+
+.qa-item {
+    background: rgba(0, 242, 255, 0.03);
+    border: 1px solid rgba(0, 242, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.qa-item:hover {
+    border-color: #00f2ff;
+    transform: translateX(10px); /* Subtle slide-in effect */
+}
+
+.qa-item strong {
+    color: #ff00ff; /* Neon Magenta for questions */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* System Scan Animation */
+body::before {
+    content: "";
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Slightly taller for a smoother fade */
+    background: linear-gradient(to bottom, 
+        transparent, 
+        rgba(0, 242, 255, 0.03), /* Lower opacity */
+        transparent);
+    animation: scan 10s linear infinite; /* Slower */
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: screen; /* Ensures it doesn't darken the text */
+}
+
+.research-highlight {
+    border: 2px solid #ff00ff;
+    background: rgba(255, 0, 255, 0.05);
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(255, 0, 255, 0.2);
+}
+
+.research-highlight h3 {
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    margin-top: 0;
+}
+
+.research-highlight ol li {
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+@keyframes scan {
+    0% { top: -100px; }
+    100% { top: 100%; }
+}
+
+/* Hover Glow for List Items to make them feel interactive */
+li:hover {
+    background: rgba(255, 0, 255, 0.1);
+    box-shadow: inset 0 0 10px rgba(255, 0, 255, 0.2);
+    border-radius: 4px;
+    cursor: crosshair;
+}
+
+.sim-console {
+    background: #000;
+    border: 2px solid #00f2ff;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+}
+
+.status-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.node {
+    padding: 10px;
+    border: 1px solid #333;
+    font-size: 0.8em;
+}
+
+.node.active { color: #00f2ff; border-color: #00f2ff; }
+.node.warning { color: #ffff00; border-color: #ffff00; animation: blink 1s infinite; }
+.node.quarantine { color: #ff0000; border-color: #ff0000; opacity: 0.5; }
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.console-text {
+    color: #00f2ff;
+    font-size: 0.9em;
+    margin: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(40) infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Hover effect for the entire simulation box */
+.sim-console:hover {
+    border-color: #ff00ff; /* Changes from Cyan to Magenta on hover */
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* Make the internal text glow brighter when the box is hovered */
+.sim-console:hover .console-text {
+    color: #ffffff;
+    text-shadow: 0 0 8px #00f2ff;
+}
+
+/* Trigger a "reconstruction" color shift for the nodes */
+.sim-console:hover .node.warning {
+    color: #00f2ff;
+    border-color: #00f2ff;
+    animation: none; /* Stops the blinking to show 'fixed' status */
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #333; /* Fits dark mode better than light gray */
+    margin: 40px 0;
+    opacity: 0.3;
+}
