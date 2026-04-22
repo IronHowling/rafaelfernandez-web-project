@@ -56,6 +56,10 @@ h1 {
     margin-top: 0;
 }
 
+h2, .research-highlight h3, .qa-item strong {
+    color: #ff66ff !important; 
+}
+
 h2 {
     color: #ff33ff; /* Brighter magenta */
     font-size: 1.8em;
@@ -66,10 +70,14 @@ h2 {
 }
 
 /* Text and Lists */
+p, li, .console-text {
+    color: #ffffff !important;
+}
+
 p {
     font-size: 1.15em;
     line-height: 1.8;
-    color: #ffffff; /* Change from #b0b0b0 to pure white */
+    color: #f0f0f0 !important;
     margin-bottom: 25px;
 }
 
@@ -97,9 +105,9 @@ img {
 
 /* Link Styling */
 .research-container a {
-    color: #00f2ff;
-    font-weight: bold;
-    text-decoration: none;
+    color: #00ffff !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px;
     border-bottom: 1px dashed #00f2ff;
 }
 
