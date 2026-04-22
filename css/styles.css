@@ -57,7 +57,7 @@ h1 {
 }
 
 h2 {
-    color: #ff00ff; /* Neon Magenta */
+    color: #ff33ff; /* Brighter magenta */
     font-size: 1.8em;
     margin-top: 40px;
     border-left: 4px solid #ff00ff;
@@ -69,7 +69,7 @@ h2 {
 p {
     font-size: 1.15em;
     line-height: 1.8;
-    color: #b0b0b0;
+    color: #ffffff; /* Change from #b0b0b0 to pure white */
     margin-bottom: 25px;
 }
 
@@ -104,7 +104,8 @@ img {
 }
 
 .research-container a:hover {
-    color: #ffffff;
+    color: #00f2ff;
+    text-decoration: underline;
     background: rgba(0, 242, 255, 0.2);
 }
 
