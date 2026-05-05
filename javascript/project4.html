@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Activation Terminal</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../html/project2.html">IoT Security (Project 2)</a>
+        <a href="../html/project3.html">Future Scope (Project 3)</a>
+        <a href="project4.html">Activation Terminal (Project 4)</a>
+    </nav>
+
+    <div class="research-container">
+        <h1>Technical Prototype: Agent Activation Interface</h1>
+        
+        <h2>Interactive Simulation Environment</h2>
+        <p>
+            This interface demonstrates the deployment workflow for an <strong>Ephemeral Intelligent Agent</strong>. In a production environment, this terminal would facilitate the manual initialization of a transient security layer within a resource-constrained network node.
+        </p>
+
+        <h3>Operational Objectives</h3>
+        <ul>
+            <li>Validate operator credentials against the secure baseline.</li>
+            <li>Trigger a dormant security agent into an active "mitigation" state.</li>
+            <li>Minimize the forensic footprint through automated self-deletion after task completion.</li>
+        </ul>
+
+        <img src="../images/terminal-ui.png" alt="A green Linux-style command line terminal showing system deployment logs.">
+        <p class="attribution">Image source: Linux Terminal System Log, Unsplash.</p>
+        
+        <hr>
+
+        <section class="terminal-interface">
+            <h2>Simulated Agent Deployment</h2>
+            <p>Please enter your professional designation to initialize the prototype simulation.</p>
+            
+            <form id="activation-form">
+                <label for="operator-name">Operator Designation:</label>
+                <input type="text" id="operator-name" placeholder="e.g., Security Lead" required>
+                <button type="button" id="activate-btn">Initialize Simulation</button>
+            </form>
+
+            <div id="greeting-output" class="console-text"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

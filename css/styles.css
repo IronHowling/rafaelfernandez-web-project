@@ -35,16 +35,19 @@ nav a:hover {
     text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
 }
 
-/* Main Content Container - Glowing Card */
 .research-container {
-    background: rgba(22, 22, 29, 0.85); /* Transparent dark */
-    backdrop-filter: blur(10px); /* Blurs the grid behind it */
-    border: 1px solid rgba(0, 242, 255, 0.3); /* Subtle neon border */
+    background: rgba(22, 22, 29, 0.85); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(0, 242, 255, 0.3); 
     max-width: 950px;
     margin: 50px auto;
     padding: 50px;
     border-radius: 20px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    
+    transition: transform 0.2s ease-out; /* Makes the follow-effect fluid */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
 }
 
 /* Headers - Neon Accents */
@@ -239,15 +242,37 @@ li:hover {
     color: #00f2ff;
     font-size: 0.9em;
     margin: 5px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 4s steps(40) infinite;
+    /* Remove 'nowrap' and 'typing' to prevent 3D clipping */
+    white-space: normal; 
+    overflow: visible;
+    width: auto;
+    animation: none; 
+    line-height: 1.6;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+/* Replace the previous #greeting-output p animation */
+/* Reset the output text to be sharp and terminal-like */
+#greeting-output p {
+    color: #00f2ff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.0em;
+    line-height: 1.5;
+    margin-top: 20px;
+    border-left: 3px solid #00f2ff;
+    background: rgba(0, 242, 255, 0.05);
+    padding: 15px;
+    
+    /* The Typing Magic */
+    overflow: hidden; 
+    white-space: pre-wrap; /* Allows wrapping while maintaining the 'type' feel */
+    display: inline-block; /* Keeps the container tight to the text */
+    width: 100%;
+    animation: terminalType 0.8s steps(50, end);
+}
+
+@keyframes terminalType {
+    from { max-height: 0; opacity: 0; }
+    to { max-height: 500px; opacity: 1; }
 }
 
 /* Hover effect for the entire simulation box */
@@ -276,4 +301,31 @@ hr {
     background-color: #333; /* Fits dark mode better than light gray */
     margin: 40px 0;
     opacity: 0.3;
+}
+@media screen and (max-width: 768px) {
+    /* 1. Stop all 3D transforms and movement */
+    .research-container, 
+    #activation-form, 
+    #greeting-output p {
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+        perspective: none !important;
+        max-height: none !important; /* Ensures text is always visible */
+        opacity: 1 !important;
+    }
+
+    /* 2. Fix the text layout so it doesn't try to 'type' on mobile */
+    #greeting-output p {
+        white-space: normal;
+        display: block;
+        width: 100%;
+        border-left: 4px solid #00f2ff;
+        padding: 15px;
+    }
+
+    /* 3. Remove the scanline/flicker overlay for battery saving */
+    body::after, body::before {
+        display: none !important;
+    }
 }
