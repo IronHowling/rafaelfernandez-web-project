@@ -21,3 +21,16 @@ In this project, I transitioned the research portal from basic HTML styling to a
 ### Challenges:
 * Balancing the "Neon SOC" aesthetic with accessibility requirements was a challenge, as bright neon colors on dark backgrounds can sometimes fail contrast checks.
 * Managing relative links across a multi-directory structure (root, /html, /css, /images) required careful pathing to ensure images and styles loaded correctly on the live GitHub Pages site.
+
+## Project 4 - JavaScript & Responsive Design
+In this final phase, I integrated dynamic behavior and mobile-first responsiveness into the Cyber Defense portal.
+
+### Technical Implementation:
+* **Interactive Terminal:** Created a functional JavaScript terminal using `addEventListener` to process operator designations and provide real-time 
+* **Responsive Architecture:** Implemented CSS Media Queries to adapt the layout for mobile and tablet devices, ensuring stability on all screen sizes 
+* **Isotropic 3D UI:** Developed a custom coordinate-mapping script that creates a 3D perspective shift based on mouse movement.
+* **Validation & Compliance:** The project maintains 100% W3C valid HTML/CSS and was audited for accessibility compliance.
+
+### Challenges:
+* **Coordinate Mapping:** Balancing the 3D rotation math so it felt immersive on desktop but didn't interfere with form usability.
+* **Input Logic:** Ensuring the "Enter" key and "Submit" button shared the same functional logic (DRY principle) for a seamless user experience.

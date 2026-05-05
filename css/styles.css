@@ -9,12 +9,12 @@ body {
     margin: 0;
 }
 
-/* Navigation Bar - Neon Border */
+
 nav {
     background-color: #121217;
     text-align: center;
     padding: 20px 0;
-    border-bottom: 2px solid #00f2ff; /* Neon Cyan Border */
+    border-bottom: 2px solid #00f2ff; 
     box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
 }
 
@@ -45,12 +45,12 @@ nav a:hover {
     border-radius: 20px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
     
-    transition: transform 0.2s ease-out; /* Makes the follow-effect fluid */
+    transition: transform 0.2s ease-out; 
     transform-style: preserve-3d;
     backface-visibility: hidden;
 }
 
-/* Headers - Neon Accents */
+
 h1 {
     color: #ffffff;
     font-size: 2.8em;
@@ -64,7 +64,7 @@ h2, .research-highlight h3, .qa-item strong {
 }
 
 h2 {
-    color: #ff33ff; /* Brighter magenta */
+    color: #ff33ff; 
     font-size: 1.8em;
     margin-top: 40px;
     border-left: 4px solid #ff00ff;
@@ -72,7 +72,7 @@ h2 {
     text-shadow: 0 0 5px rgba(255, 0, 255, 0.3);
 }
 
-/* Text and Lists */
+
 p, li, .console-text {
     color: #ffffff !important;
 }
@@ -92,10 +92,10 @@ ul {
 }
 
 li strong {
-    color: #00f2ff; /* Cyan highlights for list terms */
+    color: #00f2ff; 
 }
 
-/* Images - Neon Frame */
+
 img {
     max-width: 100%;
     height: auto;
@@ -106,7 +106,7 @@ img {
     box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
 }
 
-/* Link Styling */
+
 .research-container a {
     color: #00ffff !important;
     text-decoration: underline !important;
@@ -130,7 +130,7 @@ h1 {
     animation: neon-pulse 3s infinite ease-in-out;
 }
 
-/* FAQ Section Styling */
+
 .faq-section {
     margin-top: 50px;
 }
@@ -146,31 +146,31 @@ h1 {
 
 .qa-item:hover {
     border-color: #00f2ff;
-    transform: translateX(10px); /* Subtle slide-in effect */
+    transform: translateX(10px); 
 }
 
 .qa-item strong {
-    color: #ff00ff; /* Neon Magenta for questions */
+    color: #ff00ff;
     display: block;
     margin-bottom: 5px;
 }
 
-/* System Scan Animation */
+
 body::before {
     content: "";
     position: fixed;
     top: -100%;
     left: 0;
     width: 100%;
-    height: 150px; /* Slightly taller for a smoother fade */
+    height: 150px; 
     background: linear-gradient(to bottom, 
         transparent, 
-        rgba(0, 242, 255, 0.03), /* Lower opacity */
+        rgba(0, 242, 255, 0.03), 
         transparent);
-    animation: scan 10s linear infinite; /* Slower */
+    animation: scan 10s linear infinite; 
     pointer-events: none;
     z-index: 9999;
-    mix-blend-mode: screen; /* Ensures it doesn't darken the text */
+    mix-blend-mode: screen;
 }
 
 .research-highlight {
@@ -198,7 +198,7 @@ body::before {
     100% { top: 100%; }
 }
 
-/* Hover Glow for List Items to make them feel interactive */
+
 li:hover {
     background: rgba(255, 0, 255, 0.1);
     box-shadow: inset 0 0 10px rgba(255, 0, 255, 0.2);
@@ -242,7 +242,7 @@ li:hover {
     color: #00f2ff;
     font-size: 0.9em;
     margin: 5px 0;
-    /* Remove 'nowrap' and 'typing' to prevent 3D clipping */
+
     white-space: normal; 
     overflow: visible;
     width: auto;
@@ -250,8 +250,7 @@ li:hover {
     line-height: 1.6;
 }
 
-/* Replace the previous #greeting-output p animation */
-/* Reset the output text to be sharp and terminal-like */
+
 #greeting-output p {
     color: #00f2ff;
     font-family: 'Courier New', Courier, monospace;
@@ -262,10 +261,10 @@ li:hover {
     background: rgba(0, 242, 255, 0.05);
     padding: 15px;
     
-    /* The Typing Magic */
+
     overflow: hidden; 
-    white-space: pre-wrap; /* Allows wrapping while maintaining the 'type' feel */
-    display: inline-block; /* Keeps the container tight to the text */
+    white-space: pre-wrap; 
+    display: inline-block; 
     width: 100%;
     animation: terminalType 0.8s steps(50, end);
 }
@@ -275,35 +274,35 @@ li:hover {
     to { max-height: 500px; opacity: 1; }
 }
 
-/* Hover effect for the entire simulation box */
+
 .sim-console:hover {
-    border-color: #ff00ff; /* Changes from Cyan to Magenta on hover */
-    box-shadow: 0 0 30px rgba(255, 0, 255, 0.4);
+    border-color: #ff00ff; 
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.4); /* Check this line */
     cursor: pointer;
     transition: all 0.4s ease;
 }
 
-/* Make the internal text glow brighter when the box is hovered */
+
 .sim-console:hover .console-text {
     color: #ffffff;
     text-shadow: 0 0 8px #00f2ff;
 }
 
-/* Trigger a "reconstruction" color shift for the nodes */
+
 .sim-console:hover .node.warning {
     color: #00f2ff;
     border-color: #00f2ff;
-    animation: none; /* Stops the blinking to show 'fixed' status */
+    animation: none; 
 }
 hr {
     border: 0;
     height: 1px;
-    background-color: #333; /* Fits dark mode better than light gray */
+    background-color: #333; 
     margin: 40px 0;
     opacity: 0.3;
 }
 @media screen and (max-width: 768px) {
-    /* 1. Stop all 3D transforms and movement */
+  
     .research-container, 
     #activation-form, 
     #greeting-output p {
@@ -311,11 +310,11 @@ hr {
         transition: none !important;
         animation: none !important;
         perspective: none !important;
-        max-height: none !important; /* Ensures text is always visible */
+        max-height: none !important; 
         opacity: 1 !important;
     }
 
-    /* 2. Fix the text layout so it doesn't try to 'type' on mobile */
+
     #greeting-output p {
         white-space: normal;
         display: block;
@@ -324,7 +323,6 @@ hr {
         padding: 15px;
     }
 
-    /* 3. Remove the scanline/flicker overlay for battery saving */
     body::after, body::before {
         display: none !important;
     }
